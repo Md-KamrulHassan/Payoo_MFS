@@ -19,7 +19,7 @@
   <body>
     <header></header>
 
-    <main class="flex justify-center">
+    <main id="main" class="flex justify-center">
       <div class="mockup-phone">
         <div class="camera"></div>
         <div class="display">
@@ -38,12 +38,15 @@
             <div class="divider"></div>
             <!-- user action buttons -->
             <div>
-              <button class="btn btn-lg">Add Money</button>
-              <button class="btn btn-lg">Cash Out</button>
+              <button id="add_money_btn" class="btn btn-lg">Add Money</button>
+              <button id="cash_out_btn" class="btn btn-lg">Cash Out</button>
             </div>
 
             <!-- add money Form -->
-            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div
+              id="addmoney"
+              class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
               <form class="card-body">
                 <div class="form-control">
                   <label class="label">
@@ -77,6 +80,42 @@
               </form>
             </div>
             <!-- add money Form end -->
+            <!-- cash out money Form Start -->
+            <div
+              id="cashout"
+              class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Ammount</span>
+                  </label>
+                  <input
+                    id="cash-number"
+                    type="text"
+                    placeholder="Amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input
+                    id="cash_pin-number"
+                    type="password"
+                    placeholder="pin number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="cash-btn" class="btn btn-primary">Cashout</button>
+                </div>
+              </form>
+            </div>
+            <!-- cash out form end -->
           </div>
         </div>
       </div>
@@ -84,5 +123,7 @@
     <footer></footer>
     <!-- JS link -->
     <script src="js/home.js"></script>
+    <script src="js/cash_out.js"></script>
+    <script src="js/add_money.js"></script>
   </body>
 </html>
