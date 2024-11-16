@@ -4,10 +4,15 @@ document
   .addEventListener("click", function (event) {
     // step 2: prevent default default behavior (prevent reloading browser)
     event.preventDefault();
-    console.log("The button has been clicked");
+
     // step 3: get the phone number
     const phoneNumber = document.getElementById("phone-number").value;
     const pinNumber = document.getElementById("pin-number").value;
-
-    console.log(pinNumber);
+    // step 4: validate the authentication
+    if (phoneNumber.toUpperCase() == "SHAKIB" && pinNumber == "1234") {
+      console.log("success");
+      window.location.href = "home.html";
+    } else {
+      alert("Wrong Password or number");
+    }
   });

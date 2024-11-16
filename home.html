@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Css link -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Tailwind and DaisyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Title -->
+    <title>Payoo-Mobile Financial Service</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main class="flex justify-center">
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <!-- Artboard Content Starts from Here -->
+          <div class="artboard artboard-demo phone-3 text-center">
+            <div>
+              <!-- Stat -->
+              <div class="stats shadow">
+                <div class="stat">
+                  <div class="stat-value">89,400</div>
+                  <div class="stat-desc">Available Balance</div>
+                </div>
+              </div>
+              <!-- Stat end -->
+            </div>
+            <div class="divider"></div>
+            <!-- user action buttons -->
+            <div>
+              <button class="btn btn-lg">Add Money</button>
+              <button class="btn btn-lg">Cash Out</button>
+            </div>
+
+            <!-- add money Form -->
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Ammount</span>
+                  </label>
+                  <input
+                    id="ammount-number"
+                    type="text"
+                    placeholder="Amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input
+                    id="pin-number"
+                    type="password"
+                    placeholder="pin number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="btn-login" class="btn btn-primary">
+                    Add Money
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- add money Form end -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <!-- JS link -->
+    <script src="js/home.js"></script>
+  </body>
+</html>
