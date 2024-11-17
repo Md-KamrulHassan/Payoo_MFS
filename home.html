@@ -25,7 +25,7 @@
         <div class="display">
           <!-- Artboard Content Starts from Here -->
           <div class="artboard artboard-demo phone-3 text-center">
-            <div>
+            <div class="flex justify-between items-center gap-3">
               <!-- Stat -->
               <div class="stats shadow">
                 <div class="stat">
@@ -34,12 +34,21 @@
                 </div>
               </div>
               <!-- Stat end -->
+              <!-- button Starts here -->
+              <button
+                class="bg-white py-6 px-6 rounded-xl text-2xl font-bold text-blue-400"
+              >
+                <a href="index.html">Logout</a>
+              </button>
+
+              <!-- button Ends here -->
             </div>
             <div class="divider"></div>
             <!-- user action buttons -->
             <div>
               <button id="add_money_btn" class="btn btn-lg">Add Money</button>
               <button id="cash_out_btn" class="btn btn-lg">Cash Out</button>
+              <button id="Transition-btn" class="btn btn-lg">Transition</button>
             </div>
 
             <!-- add money Form -->
@@ -116,14 +125,20 @@
               </form>
             </div>
             <!-- cash out form end -->
+            <!-- Transition form start here -->
+            <div id="transition" class="hidden">
+              <h1>Transition Section</h1>
+            </div>
+            <!-- Transition end here -->
           </div>
         </div>
       </div>
     </main>
     <footer></footer>
     <!-- JS link -->
-    <script src="js/home.js"></script>
-    <script src="js/cash_out.js"></script>
-    <script src="js/add_money.js"></script>
+    <script src="js/home/main.js"></script>
+    <script src="js/home/add_money.js"></script>
+    <script src="js/home/cash_out.js"></script>
+    <script src="js/home/transition.js"></script>
   </body>
 </html>
