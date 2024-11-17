@@ -15,17 +15,21 @@ document.getElementById("add-btn").addEventListener("click", function (event) {
 
   // validation
   if (pinNumber == 1234) {
-    // Update the amount after added amount
-    const updateAmmount = addMoneyValue + Balance;
-    // Update the DOM
-    currentAmmount.innerText = updateAmmount;
+    if (addMoneyValue > 0) {
+      // Update the amount after added amount
+      const updateAmmount = addMoneyValue + Balance;
+      // Update the DOM
+      currentAmmount.innerText = updateAmmount;
 
-    // Added to transaction History
-    const p = document.createElement("p");
-    p.style.color = "green";
-    p.innerText = `Added ${addMoneyValue} Tk. New Balance: ${updateAmmount}`;
+      // Added to transaction History
+      const p = document.createElement("p");
+      p.style.color = "green";
+      p.innerText = `Added ${addMoneyValue} Tk. New Balance: ${updateAmmount}`;
 
-    transactionContainerID("transition").appendChild(p);
+      transactionContainerID("transition").appendChild(p);
+    } else {
+      alert("Please Add some value");
+    }
   } else {
     alert("Add Ammount Not Success! Enter the Correct Password");
   }
